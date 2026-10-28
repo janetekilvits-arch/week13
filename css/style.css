@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary-color: #202020;
+    --primary-light: #ffffff;
+    --muted-red: #a75B4d;
+    --accent-blue: #8AB0BC;
+    --heading-font: "Space Grotesk", sans-serif;
+    --body-font: "DM Sans", sans-serif;
+    --link-fonts: "Quicksand", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-light);
+    font-family: var(--body-font);
+    color: var(--primary-color);
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    width: 100%;
+
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-weight: 900;
+    font-size: 2.6rem;
+    padding: 1rem 0;
+}
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 250px;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.rating-stars {
+    display: inline-block;
+
+}
+
+.rating-stars li {
+    display: inline-block;
+    color: var(--muted-red);
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-actions {
+    text-align: right;
+}
+
+.image-actions-icons {
+    list-style: none;
+}
+
+.image-actions-icons li {
+    display: inline-block;
+    margin: 1.2rem 2rem;
+}
+
+.image-actions-icons li i {
+    color: var(--muted-red);
+    font-size: 2.2rem;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+.main-title {
+    font-size: 1.8rem;
+    margin: 1.2rem auto;
+    line-height: 1.5;
+}
+
+.aboutme {
+    margin: 2rem auto;
+}
+
+.aboutme p {
+    line-height: 1.5;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.CV {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+    text-align: left;
+}
+
+.CV h2 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    justify-self: start;
+    text-align: left;
+    margin-left: 0;
+}
+
+.CV-title {
+    font-size: 1.5rem;
+    margin: 1.2rem;
+    text-align: left;
+    color: #8AB0BC; /* Sini-hallikas toon */
+}
+
+.CV-education-list,
+.CV-experience-list{
+    list-style: none;
+    margin: 2rem;
+}
+
+.CV-education-list li,
+.CV-experience-list li {
+    font-size: 1.2rem;
+    margin: 2rem auto;
+}
+
+.CV-education-list {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.CV-experience-list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.skills {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list-element-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 1.1rem auto;
+    color: #8AB0BC; /* Sini-hallikas toon */
+}
+
+.skills-list-element-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.reviews {
+    width: 100%;
+    height: auto;
+}
+
+.reviews form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+    margin: 3rem 0;
+}
+
+.reviews .email-box {
+    grid-column: 1/3;
+}
+
+.reviews .email-box input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid var(--muted-red);
+    outline: none;
+    margin: 2rem 0;
+}
+
+.reviews .review-box {
+    width: 100%;
+    grid-column: 1/3;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    padding: 12px;
+    border: 1px solid var(--muted-red);
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.reviews-btn-container {
+    grid-column: 2/3;
+    display: flex;
+    align-items: flex-start;
+    justify-items: flex-end;
+}
+
+.reviews-btn-container button {
+    background-color: var(--muted-red);
+    color: var(--primary-light);
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom:3px solid #a75B4d ;
+    width: 60%;
+}
+
+.reviews-stars {
+    grid-column: 1/3;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reviews-stars .rating-stars {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.reviews-stars .rating-stars li {
+    font-size: 2.2rem;
+    color: var(--muted-red);
+}
+
+
+.reviews-stars button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.reviews-stars button:hover {
+  text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.social-media-list,
+.contact-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-list {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 2rem auto;
+}
+
+.social-media-list li i,
+.social-media-list li a,
+.social-media-list svg,
+.social-media-list li img {
+    font-size: 3rem;
+    color: var(--accent-blue);
+    display: flex;
+}
+
+.contact-links-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem auto;
+}
+
+.contact-links-list li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: var(--link-fonts);
+    font-size: 1.25rem;
+}
+
+hr {
+    width: 300px;
+    height: 2px;
+    border: none;
+    border-top: 2px solid var(--muted-red);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .image-actions {
+        text-align: center;
+    }
+
+    .ingredients {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .ingredients h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .ingredients-dough-list li,
+    .ingredients-filling-list li {
+        font-size: 1.5rem;
+    }
+
+    .reviews form {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .review-box {
+        grid-column: 1/2;
+    }
+
+    .reviews-btn-container {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding: 2rem;
+    }
+}
+
